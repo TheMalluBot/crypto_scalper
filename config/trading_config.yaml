@@ -1,0 +1,35 @@
+# Trading Configuration
+trading:
+  # Capital allocation
+  max_position_size: 0.02  # 2% of portfolio per trade
+  max_daily_loss: 0.05     # 5% daily loss limit
+  max_drawdown: 0.10       # 10% max drawdown
+  
+  # Risk management
+  stop_loss_pct: 0.005     # 0.5% stop loss
+  take_profit_pct: 0.015   # 1.5% take profit
+  risk_reward_ratio: 3.0   # Minimum 1:3 risk/reward
+  
+  # Execution settings
+  slippage_tolerance: 0.001  # 0.1% slippage tolerance
+  order_timeout: 30         # Order timeout in seconds
+  max_orders_per_minute: 10
+  
+  # Market conditions
+  min_volume_24h: 1000000   # Minimum 24h volume in USD
+  max_spread_pct: 0.002     # Maximum 0.2% spread
+  
+# GPU/CPU settings
+performance:
+  use_gpu: true
+  gpu_memory_fraction: 0.8
+  cpu_cores: -1  # Use all cores
+  parallel_processing: true
+  
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/trading.log"
+  console: true
+  max_file_size: "100MB"
+  backup_count: 5 
